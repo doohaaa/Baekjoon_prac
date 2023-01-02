@@ -1,0 +1,174 @@
+출력 print(" ")
+
+입력 input(), 
+input값은 모두 문자열로 받아들임
+int형으로 받고싶을땐 int(input())
+
+입력을 여러개 받는 경우 input().split()  #split 의 괄호 속에 나누기 단위 입력 
+print(int(A)*int(B)) : 자료형 줘
+
+산술연산자
+/:나눗셈(소숫점까지), %: 나눗셈 나머지, //:나눗셈 몫
+**: 제곱
+
+map함수 : 여러 요소에 하나의 함수를 한꺼번에 대응_자료형 지정가능
+저장할 변수 =map(함수이름, 대응할 일련의 요소)
+A,B,C=map(int,input().split())
+
+
+print에서 ",\ 문자를 출력할려는 경우 앞에 \붙임, '는 신경 x
+print("안녕"+"반가워") => 안녕반가워
+print("안녕","반가워")=> 안녕 반가워
+같은 문자를 여러번 출력시 print("-"*10) =>----------
+print 숫자 출력시 ""없이 그냥 숫자만 입력 ex) print(2)
+
+
+논리연산자 and, or, not
+
+조건문(괄호 사용 안하고 tab으로 구분) 
+if ~~~:
+	실행
+elif ~~~:
+	실행
+
+
+반복문
+for i in range(1,10) : =>의미: 1~9까지의 i동안 반복문 돌기 
+i의 초기값은 1, 만약에 for i in range(2,10)하면 초기값이 2
+
+range(10) =>의미: 0~9
+
+
+
+while(조건):
+
+
+def 함수 생성시 리턴타입에 관계없이 이걸로 시작
+
+
+빠른 입력
+import sys 앞에 써주고
+sys.stdin.readline() 을 사용, 마지막 맨끝의 개행문까지 같이 입력받기 때문에 문자열을 저장하고 싶을 경우 .rstrip()추가해주는게 좋음
+- 입력받는 함수지만, 출력시간이 짧음
+팁: input= sys.stdin.readline 을 맨 앞에 쓰고 사용해도 됨
+
+
+-print 문속 서식문자가 들어가야하는 이유:
+문자+숫자를 함께 출력할 경우
+
+
+list사용법
+리스트명 = [요소1, 요소2, 요소 ...]
+여러가지 입력을 리스트로 사용하는 법 : A= list(map(int,unput().split())) 그후 정수 N개 만큼 반복하는 (for)반복문을 입력한다.
+매개변수 end를 넣어준 이유는? 해당 결과값을 출력할때 다음줄로 넘기지 않고 그 줄에 계속 출력하기 위함. 
+A= list(map(int,input().split()))
+for i in range(N):
+if X>A[i] :
+print(A[i],end=" ")
+
+
+while문에서 true 사용법 (내부에 조건 걸어서 break 하나 만들어줘야 무한루프 멈출 수 있음)
+while True :
+	A,B= map(int,input().split())
+	if A==0 and B==0 :
+		break
+	print(A+B)      
+
+
+try-except문 사용
+여러개의 테스트가 주어지는 경우, (EOF에 대해 알아보자)
+try소스에서 오류가 나면 except 로 보내주는 역할
+
+
+N개의 입력으로 list 생성
+N_list=list(map(int,input().split()))
+list의 최대값, 최솟값구하기
+	방법1) max(N_list), min(L_list)
+	방법2) N_list.sort() 후에 N_list[0]: 최소, N_list[N-1]:최대
+
+리스트에 요소 추가 (append)
+append(x): 리스트의 맨 마지막에 x를 추가하는 함수 
+ex) a=[1,2,3]
+a.append(4)
+a
+>>[1,2,3,4]
+리스트에 포함된 요소x의 개수세기
+a.count(x)
+a.count(1)>>1
+문자열로 변환시키는 법 str(A*B*C)
+
+
+집합 set()함수
+-중복 불가능, 순서 없음
+a=[1,2,3,3,4,5]
+a= set(a) >>1,2,3,4,5
+
+리스트 길이 구하기 len
+len(a)= 5
+
+
+소숫점 표현하기 
+_n번째 까지만 표현하고 반올림을 하고 싶을 때, round 함수 사용
+round(실수,n)
+_올림, 내림, 버림 : import math 해주고, math 클래스 안의 ceil, floor, trunc 함수를 사용해야함
+math.ceil(i) 올림
+math.floor(i) 내림
+math.trunc(i) 버림
+
+
+format 함수 사용
+문자열 지정
+	a='{}월 {}일 날씨는 {}입니다.'.format(12,28,'맑음')
+	print(a) =>12월 28일 날씨는 맑음입니다.
+{}내에 순서를 지정
+	month=12
+	day =28
+	weather ='맑음'
+	a='{2}월 {1}일 날씨는 {0}입니다.'.format(weather, day, month)
+
+{}내에 순서대신 별칭을 지정
+	a='{m}월 {d}일 날씨는 {w}입니다.'.format(w=weather, d=day, m=month)
+
+소숫점을 출력하거나 정수 자릿수를 포맷팅, 콜론(:) 뒤에 포맷팅 양식 지정
+	a='{m:0.2f}월 {d:05d}일 날씨는 {w}입니다.'.format(w=weather, d=day, m=month)
+	print(a)=>12.00월 00028날씨는 맑음입니다.
+
+
+
+list속 원소들 순서로 구분
+: 스페이스를 통해 숫자를 입력받음, 그 후 인덱스로 구분 가능
+ex) A= list(map(int,input().split()))
+new= A[0] : 첫번째 요소를 new로
+avr=sum(A[1:]) / num : A의 두번째 요소부터 끝까지
+
+
+주어진 글자의 아스키 코드값을 출력하는 함수
+ord()
+
+
+//문자열 
+문자열 찾기 함수  
+.find() : 글자를 찾으면 처음 발견한 인덱스를 반환한다. 
+         찾으려는 글자가 없을때 -1 출력
+         리스트, 투플, 딕셔너리 자료형에는 find 함수 사용 불가
+형식 .find('찾을 원소')
+       .find('찾을 원소', 시작 index)
+       .find('찾을 원소', 시작 index, 끝 index)
+cf) index() : 찾는 문자가 없으면 ValueError 에러를 발생
+	   문자열, 투플, 리스트 자료형에서 사용이 가능
+                딕셔너리 자료형에선 사용할 수 없음
+
+
+in 연산자
+값이 있는지 확인해준다. 
+찾는 값이 포함되어 있으면 True, 없으면 False를 반환한다.
+
+
+replace 함수
+변수.replace(old, new, [count])
+-old : 현재 문자열에서 변경하고 싶은 문자
+-new : 새로 바꿀 문자
+-count : 변경할 횟수, 입력하지 않으면 old 문자열 전체를 변경
+
+
+ 
