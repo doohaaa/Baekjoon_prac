@@ -1,0 +1,487 @@
+2557.
+print("Hello World")
+
+10178.
+print("강한친구 대한육군\n강한친구 대한육군")
+
+10171.
+print("\\    /\\")
+print(" )  ( ')")
+print("(  /  )")
+print(" \\(__)|")
+
+
+1000.
+A,B= input().split()
+print(int(A)+int(B))
+
+1001.
+A,B = input().split()
+print(int(A)-int(B))
+
+10998.
+A,B=input().split()
+print(int(A)*int(B))
+
+1008.
+A,B=input().split()
+print(int(A)/int(B))
+
+#0630
+10869.
+A,B= input().split()
+print(int(A)+int(B))
+print(int(A)-int(B))
+print(int(A)*int(B))
+print(int(A)//int(B))
+print(int(A)%int(B))
+
+10926.
+name=input()
+print(name+"??!")
+
+18108.
+year=input()
+print(int(year)-543)
+
+10430.
+A,B,C=map(int,input().split())
+print((A+B)%C)
+print(((A%C)+(B%C))%C)
+print((A*B)%C)
+print(((A%C)*(B%C))%C)
+
+/////////////////////
+2588.
+A=int(input())
+B=int(input())
+print(A*(B%10))
+print(A*((B%100)//10))
+print(A*(B//100))
+print(A*B)
+
+(X런타임에러)
+A,B=map(int,input().split("\n"))
+print(A*(B%10))
+print(A*((B%100)//10))
+print(A*(B//100))
+print(A*B)
+
+25083.
+print("         ,r'\"7")
+print("r`-_   ,'  ,/")
+print(" \. \". L_r'")
+print("   `~\\/")
+print("      |")
+print("      |")
+
+
+level2. 조건문
+1330.
+A,B=map(int,input().split())
+if A>B:
+	print(">")
+elif A<B:
+	print("<")
+elif A==B:
+	print("==")
+
+9498.
+A=int(input())
+if A>=90:
+print("A")
+elif 79<A:
+print("B")
+elif 69<A:
+print("C")
+elif 59<A:
+print("D")
+else:
+print("F")
+
+2753.
+A=int(input())
+if A%4==0 and (A%100!=0 or A%400==0) :
+print(1)
+else:
+print(0)
+
+14681.
+A=int(input())
+B=int(input())
+if A>0 and B>0:
+print(1)
+elif A<0 and B>0:
+print(2)
+elif A<0 and B<0:
+print(3)
+elif A>0 and B<0:
+print(4)
+
+2884.
+H,M=map(int,input().split()))
+if 45<=M<=59 :
+	M=M-45
+elif 0<=M<45 and H>0:
+	H=H-1
+	M=60-45+M
+else :
+	H=23
+	M=60-45+M
+print(H,M)
+
+
+Q2525.
+A,B=map(int,input().split())
+C= int(input())
+
+if C>60:
+if C%60>=B :
+A=A-(130//60)-1
+B=60-(C%60)+B
+else:
+A=A-(130//60)
+B=B-(130%60)
+else:
+if C%60>B:
+A=A-1
+B=60-C+B
+else :
+A=A
+B=B-C
+print(A,B)
+
+
+2480.
+A,B,C=map(int,input().split())
+if A==B==C:
+print(10000+A*1000)
+elif A==B or B==C or A==C:
+if A==B or A==C:
+print(1000+A*100)
+elif B==C:
+print(1000+B*100)
+elif A!=B and B!=C and C!=A:
+print(max((A,B,C))*100) 
+
+
+LEVEL3. 반복문
+2739.
+A=int(input())
+i=1
+while(i<10):
+print(A,"*",i,=,A*i)
+i+=1
+ 
+(다른 답안)
+A=int(input())
+for i in range(1,10) :
+print(A,"*",i,"=",A*i)
+i+=1
+
+#0705
+10950.
+T=int(input())
+for i in range(T):
+A,B=map(int,input().split())
+print(A+B)
+
+
+#0706
+8983.
+A=int(input())
+k=0
+for i in range(A+1):
+    k=i+k
+print(k)
+
+
+15552.
+import sys
+input = sys.stdin.readline
+T=int(input())
+for i in range(T) : 
+A,B=map(int,input().split())
+print(A+B)
+
+
+2741.
+N=int(input())
+for i in range(1,N+1) :
+print(i)
+
+
+2742.
+N= int(input())
+for i in range(N) :
+print(N-i)
+
+
+11021.
+import sys
+input = sys.stdin.readline
+T=int(input())
+for i in range(1,T+1) : 
+A,B=map(int,input().split())
+print("Case","#%d: %d"%(i,A+B))
+
+
+11022.
+import sys
+input = sys.stdin.readline
+T=int(input())
+for i in range(1,T+1) : 
+A,B=map(int,input().split())
+print("Case #%d: %d + %d = %d"%(i,A,B,A+B))
+
+
+2438.
+N=int(input())
+for i in range(1,N+1);
+print("*"*i)
+
+
+2439.
+N=int(input())
+for i in range(1,N+1):
+print(" "*(N-i)+"*"*i)
+
+
+#0708
+10871.
+N,X=map(int,input().split())
+A= list(map(int,input().split()))
+for i in range(N):
+if X>A[i] :
+print(A[i],end=" ")
+
+
+10952.
+while True :
+	A,B= map(int,input().split())
+	if A==0 and B==0 :
+		break
+	print(A+B)                                                             
+
+
+10951.
+while True : 
+	try : 
+		A,B=map(int,input().split())
+		print(A+B)
+	except:
+		break
+
+
+1110.
+N=int(input())
+n=0
+new=N
+while True :
+	A=new//10
+	B=new%10
+	C=(A+B)%10
+	new=B*10+C
+	n=n+1
+	if (N==new) :
+		print(n)
+		break
+
+
+#0711
+10818.
+N=int(input())
+N_list=list(map(int,input().split()))
+print(min(N_list),max(N_list))
+
+
+2562.
+a=[]
+for i in range(9):
+a.append(int(input()))
+print(max(a))
+print(a.index(max(a))+1)
+
+
+#0712
+2577.
+A=int(input())
+B=int(input())
+C=int(input())
+a=list(str(A*B*C))
+for i in range(10):
+	print(a.count(str(i)))
+
+
+3052.
+a=[]
+for i in range(10):
+	arr=int(input())
+	b= arr%42
+	a.append(b)
+a=set(a)
+print(len(a))
+
+다른 답안
+a=[]
+for i in range(10):
+    a.append(int(input())%42)    
+a=set(a)
+print(len(a))
+
+
+Q1546. 
+
+
+
+#0713
+8958.
+다시
+
+
+4344.
+C=int(input())
+for i in range(C):
+    arr=list(map(int,input().split()))
+    count=0
+    N=arr[0]
+    avg=sum(arr[1:])/N
+    for j in arr[1:]:
+        if j>avg : count= count+1
+    perc=(count/N)*100
+    print('{:.3f}%'.format(round(perc,3)))
+
+
+
+15596.
+def solve(a):
+result= sum(a)
+return result
+
+
+4673.
+while True:
+a=1
+if a<=10000:
+a=a+a//1000+(a%1000)//100+((a%1000)%100)//10+((a%1000)%100)%10
+print(a)
+else : break
+
+
+#0715
+Q1456.
+N=int(input())
+a=[]
+for i in range(N):
+    a.append(map(int,input().split()))
+k=max(a)
+sum=0
+for i in range(N):
+    b=a[i]/k*100
+    sum=b+sum   
+print(sum)
+
+
+#0718
+11654.
+print(ord(int(input())))
+
+
+11720.
+N=int(input())
+sum=0
+a=input()
+for i in a:
+	sum=int(i)+sum
+print(sum)
+
+
+10809.
+S=input()
+for i in range(97,123):           #ascii 소문자 a~z
+print(S.find(chr(i)), end=' ')
+
+2675.
+N=int(input())
+for i in range(N):
+	A,B=input().split()
+	for j in range(len(B)):	
+		print(B[j]*int(A), end='')
+	print()
+
+Q.1157.
+S=input()
+A=list(set(S))
+cnt=[]
+
+for i in A:
+	cnt.append(S.count(i))
+if cnt.count(max(cnt))>1:
+	print("?")
+else:
+	index=cnt.index(max(cnt))
+	print(A[index])
+ 
+? 마지막 A[index]부분 이해 X
+
+#0719
+Q.1152.
+A=input()
+print(A.count(' ')+1)
+
+2908.
+A,B=map(int,input().split())
+A=(A%10)*100+(A//100)+((A//10)%10)*10
+B=(B%10)*100+(B//100)+((B//10)%10)*10
+if A>B:
+print(A)
+else:
+print(B)  
+
+#0720
+5622.
+string = input()
+sum=0
+for i in range (len(string)) :
+if string=='A' or string[i]=='B' or string[i]=='C':
+sum=sum+3
+elif string[i]=='D' or string[i]=='E' or string[i]=='F':
+sum=sum+4
+elif string[i]=='G' or string[i]=='H' or string[i]=='I':
+sum=sum+5
+elif string[i]=='J' or string[i]=='K' or string[i]=='L':
+sum=sum+6
+elif string[i]=='M' or string[i]=='N' or string[i]=='O':
+sum=sum+7
+elif string[i]=='P' or string[i]=='Q' or string[i]=='R' or string[i]=='S':
+sum=sum+8
+elif string[i]=='T' or string[i]=='U' or string[i]=='V':
+sum=sum+9
+elif string[i]=='W' or string[i]=='X' or string[i]=='Y' or string[i]=='Z':
+sum=sum+10
+
+print(sum)
+
+
+#0803
+2941.
+다시 풀어봐
+
+
+1316.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                              
